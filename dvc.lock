@@ -5,20 +5,20 @@ stages:
     deps:
     - path: code/datasets/prepare.py
       hash: md5
-      md5: dc95a36893fcbea575246d892bf6ca11
-      size: 4032
+      md5: b5367b0027c82edacd2e11c72e2aba09
+      size: 4031
     - path: data/raw/penguins.csv
       hash: md5
       md5: a06a0210251465a86fb970018292304d
       size: 15241
     - path: penguins.py
       hash: md5
-      md5: 3c7be9bb04c421f1953faf3b5adabf26
-      size: 571
+      md5: 8770e5203a4c9abc7d39454e965dd341
+      size: 570
     - path: requirements-model.txt
       hash: md5
-      md5: 48a6744d1ebd1fab3b4bdefb0c4d83aa
-      size: 76
+      md5: 52c1e2e62f49624789f6338a11c83b76
+      size: 75
     outs:
     - path: data/processed/cleaning_report.json
       hash: md5
@@ -37,8 +37,8 @@ stages:
     deps:
     - path: code/models/train.py
       hash: md5
-      md5: 392fb7f5e644f17a01000cdfa278979b
-      size: 3727
+      md5: 45b962b437a9ae7f37324c2a133aa65d
+      size: 3816
     - path: data/processed/cleaning_report.json
       hash: md5
       md5: 28cd1a13703ecea8bb8ae3c66f76e67c
@@ -53,12 +53,12 @@ stages:
       size: 9704
     - path: penguins.py
       hash: md5
-      md5: 3c7be9bb04c421f1953faf3b5adabf26
-      size: 571
+      md5: 8770e5203a4c9abc7d39454e965dd341
+      size: 570
     - path: requirements-model.txt
       hash: md5
-      md5: 48a6744d1ebd1fab3b4bdefb0c4d83aa
-      size: 76
+      md5: 52c1e2e62f49624789f6338a11c83b76
+      size: 75
     - path: requirements.txt
       hash: md5
       md5: 7f6b0e1af0314defe7d5ab5c7e29c0c9
@@ -66,7 +66,7 @@ stages:
     outs:
     - path: models/metadata.json
       hash: md5
-      md5: 0279cb5052f345e806ce2976d0e1216f
+      md5: 28e09f63457492d0be95b802a1c2fafc
       size: 407
     - path: models/metrics.json
       hash: md5
@@ -81,29 +81,29 @@ stages:
     deps:
     - path: .dockerignore
       hash: md5
-      md5: 808ff20de901d628babd4d2f06dc8c6c
-      size: 81
+      md5: 177c6824d7e09b16aa96d20b7d243846
+      size: 80
     - path: code/deployment/api
       hash: md5
-      md5: 451c6927187d061854413796d944377f.dir
-      size: 2834
+      md5: 233174fd52eab00c831203feb7f1ff4b.dir
+      size: 2831
       nfiles: 3
     - path: code/deployment/app
       hash: md5
-      md5: 66132f37e62f465f0a0e3165479c0592.dir
-      size: 2451
+      md5: dce011e918299874f30d321679a479b0.dir
+      size: 2448
       nfiles: 3
     - path: code/deployment/deploy.py
       hash: md5
-      md5: 6738f8ec38f25ab11f725861f70d97a5
-      size: 1630
+      md5: 5e7f51a3e295345244f36a48cfb034c2
+      size: 1629
     - path: code/deployment/docker-compose.yml
       hash: md5
-      md5: 789f467f736d383dfb7d131ddbcd4e8e
-      size: 912
+      md5: 994fc3de999be1ae7faf0c520ead90bf
+      size: 911
     - path: models/metadata.json
       hash: md5
-      md5: 0279cb5052f345e806ce2976d0e1216f
+      md5: 28e09f63457492d0be95b802a1c2fafc
       size: 407
     - path: models/model.joblib
       hash: md5
@@ -111,9 +111,9 @@ stages:
       size: 2017
     - path: penguins.py
       hash: md5
-      md5: 3c7be9bb04c421f1953faf3b5adabf26
-      size: 571
+      md5: 8770e5203a4c9abc7d39454e965dd341
+      size: 570
     - path: requirements-model.txt
       hash: md5
-      md5: 48a6744d1ebd1fab3b4bdefb0c4d83aa
-      size: 76
+      md5: 52c1e2e62f49624789f6338a11c83b76
+      size: 75

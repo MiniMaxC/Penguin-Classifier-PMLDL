@@ -228,6 +228,9 @@ initialized; do not rerun `dvc init` in a clone. Scheduled runs may update
 
 ## Tests and TA demonstration
 
+The completed local verification, including two real runs five minutes apart,
+is recorded in [docs/verification.md](docs/verification.md).
+
 ```powershell
 .\.venv\Scripts\python.exe -m pytest -q
 docker compose -f code/deployment/docker-compose.yml ps

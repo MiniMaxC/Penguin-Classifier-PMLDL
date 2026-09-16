@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.runtime/
+.coverage
+htmlcov/
+/data/processed/
+/models/
+mlruns/
+mlartifacts/
+*.db
+*.db-shm
+*.db-wal
+*.log
+tmp/
+.env

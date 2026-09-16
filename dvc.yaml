@@ -1,0 +1,41 @@
+stages:
+  prepare:
+    cmd: python code/datasets/prepare.py
+    deps:
+      - data/raw/penguins.csv
+      - code/datasets/prepare.py
+      - penguins.py
+      - requirements-model.txt
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+      - data/processed/cleaning_report.json
+  train:
+    cmd: python code/models/train.py
+    deps:
+      - data/processed/train.csv
+      - data/processed/test.csv
+      - data/processed/cleaning_report.json
+      - code/models/train.py
+      - penguins.py
+      - requirements-model.txt
+      - requirements.txt
+    outs:
+      - models/model.joblib
+      - models/metadata.json
+    metrics:
+      - models/metrics.json:
+          cache: false
+  deploy:
+    cmd: python code/deployment/deploy.py
+    deps:
+      - models/model.joblib
+      - models/metadata.json
+      - code/deployment/deploy.py
+      - code/deployment/docker-compose.yml
+      - code/deployment/api
+      - code/deployment/app
+      - penguins.py
+      - requirements-model.txt
+      - .dockerignore
+    always_changed: true

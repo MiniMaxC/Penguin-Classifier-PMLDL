@@ -1,0 +1,10 @@
+-r requirements-model.txt
+-r code/deployment/api/requirements.txt
+-r code/deployment/app/requirements.txt
+dvc==3.63.0
+# DVC 3.x imports an internal symbol removed by pathspec 1.x.
+pathspec==0.12.1
+mlflow==3.5.1
+filelock==3.20.0
+pytest==8.4.2
+httpx==0.28.1

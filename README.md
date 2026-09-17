@@ -21,6 +21,7 @@ flowchart LR
     Scheduler[Python scheduler: every 300 seconds] --> Prepare
 ```
 
+
 ## Prerequisites
 
 - Python **3.11** and Git.

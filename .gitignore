@@ -14,4 +14,5 @@ mlartifacts/
 *.db-wal
 *.log
 tmp/
+output/
 .env

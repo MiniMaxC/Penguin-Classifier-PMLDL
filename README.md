@@ -36,9 +36,11 @@ it downloads packages and images; later builds reuse Docker's dependency layers.
 
 ## Quick start — Windows PowerShell
 
-After downloading or cloning this repository:
+Clone the repository, then create the environment and run the pipeline:
 
 ```powershell
+git clone https://github.com/MiniMaxC/Penguin-Classifier-PMLDL.git
+cd Penguin-Classifier-PMLDL
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe pipeline.py --once
@@ -60,6 +62,8 @@ to call the API and display the species and the model's MLflow run ID.
 ## Quick start — Linux/macOS
 
 ```bash
+git clone https://github.com/MiniMaxC/Penguin-Classifier-PMLDL.git
+cd Penguin-Classifier-PMLDL
 python3.11 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python pipeline.py --once
@@ -296,7 +300,8 @@ Source, CC0 license, checksum, and research citation are documented in
 [data/raw/README.md](data/raw/README.md). The excluded CelebFaces and patient's
 smoking status datasets are not used.
 
-The solution is prepared locally. To submit, create your own **public GitHub
-repository**, commit the source/configuration/raw data/README and `dvc.lock`, push,
-and submit that repository's URL. Do not commit `.venv`, `.runtime`, or caches.
-No cloud deployment is required for the local TA demonstration.
+Repository: [MiniMaxC/Penguin-Classifier-PMLDL](https://github.com/MiniMaxC/Penguin-Classifier-PMLDL).
+The repository contains the source, configuration, raw data, tests, documentation,
+and `dvc.lock`. Generated artifacts, environments, caches, and personal study
+materials are excluded. No cloud deployment is required for the local TA
+demonstration.

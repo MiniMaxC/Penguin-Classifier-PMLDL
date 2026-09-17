@@ -8,4 +8,6 @@ data
 tests
 docs
 tmp
+output
+*.ipynb
 *.log

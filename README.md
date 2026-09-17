@@ -230,39 +230,6 @@ everything with `pipeline.py --once`. DVC's tracked configuration is already
 initialized; do not rerun `dvc init` in a clone. Scheduled runs may update
 `dvc.lock`; scheduling never creates Git commits or pushes anything.
 
-## Tests and TA demonstration
-
-The completed local verification, including two real runs five minutes apart,
-is recorded in [docs/verification.md](docs/verification.md).
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-docker compose -f code/deployment/docker-compose.yml ps
-```
-
-Tests cover real preparation and training, train-only scaling, saved model and
-MLflow prediction equivalence, input validation, UI success/error messages,
-scheduler retries and overruns, and an isolated DVC run where training fails and
-deployment is never called. Tests do not start or modify Docker containers.
-Only test fixtures contain synthetic malformed rows.
-
-Suggested demonstration:
-
-1. Show the three stages in `dvc.yaml` and the committed raw CSV.
-2. Start the bounded two-run scheduler shown above.
-3. Show the split files, cleaning report, metrics, and MLflow run.
-4. Show two healthy containers with Compose and predict through the web app.
-5. After the second scheduled run, predict again and show the new run ID in the
-   app/API, matching the second successful entry in `.runtime/runs.jsonl`.
-
-| Assignment criterion | Evidence |
-|---|---|
-| Data engineering | Cleaning report and saved train/test CSVs |
-| Model engineering | Packaged pipeline, metrics JSON, MLflow experiment |
-| Deployment | Separate healthy API/app containers and browser prediction |
-| Automation | Two full scheduled runs with timestamps and changed run IDs |
-| Repository structure | Organized source, dependency files, DVC graph, README |
-
 ## Stop and troubleshoot
 
 Press **Ctrl+C** in the scheduler terminal to stop future runs. Containers remain
